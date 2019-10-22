@@ -1,0 +1,44 @@
+/* Global Styles*/
+
+.sidenav {
+  height: 100%;
+  width: 65px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  text-align: center;
+  transform: rotate(-90deg);
+  padding: 100px 6px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #eb6864;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+.main {
+  margin-left: 190px;
+  background-color: #021e3a;
+  width: 300px;
+  height: 751px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
