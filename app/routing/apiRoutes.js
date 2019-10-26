@@ -4,7 +4,8 @@
 // These data sources hold arrays of information
 // ===============================================================================
 
-const friends = require("api/friends");
+const friendArray = require("../data/friends");
+const friendData = require("/api/survey");
 
 // ===============================================================================
 // ROUTING
@@ -17,7 +18,7 @@ module.exports = function(app) {
   // (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table)
   // ---------------------------------------------------------------------------
 
-  app.get("/api/friends", function(req, res) {
+  app.get("/api/survey", function(req, res) {
     res.json();
   });
 
