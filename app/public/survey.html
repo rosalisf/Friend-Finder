@@ -12,11 +12,7 @@
       crossorigin="anonymous"
     />
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
+    
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
@@ -74,13 +70,33 @@
     #subButton {
       width: 1169px;
       margin-top: 15px;
-      margin-left: 160px;
-      margin-bottom: 13px;
+      margin-left: 10px;
+      margin-bottom: 15px;
     }
   </style>
   <body>
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Closest Friend</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h5 id="friendName"></h5>
+                <img id="friendPicture"/>
+                <p>Now that you got your match, you can now contact them! ^__^</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
     <div class="sidenav">
-      <a href="/home.html">FriendFinder</a>
+      <a href="home.html">FriendFinder</a>
     </div>
 
     <h1>Survey Questions</h1>
@@ -112,7 +128,7 @@
     == 0
     <h3 class="lower">Now for the Real Stuff</h3>
     <small id="emailHelp"
-      >Choose from 1 (Strongly agree) to 5 (Strongly disagree).</small
+      >Choose from 1 (Strongly disagree) to 5 (Strongly agree).</small
     >
     <div class="form-group-2">
       <h4>Question 1</h4>
@@ -122,12 +138,62 @@
         role="toolbar"
         aria-label="Toolbar with button groups"
       >
-        <div class="btn-group mr-2" role="group" aria-label="First group">
-          <button type="button" class="btn btn-secondary">1</button>
-          <button type="button" class="btn btn-secondary">2</button>
-          <button type="button" class="btn btn-secondary">3</button>
-          <button type="button" class="btn btn-secondary">4</button>
-          <button type="button" class="btn btn-secondary">5</button>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-secondary" id="buttons1">
+            <input
+              type="radio"
+              name="question1"
+              id="option1"
+              autocomplete="off"
+              value="1"
+              
+            />
+            1
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question1"
+              id="option2"
+              autocomplete="off"
+              value="2"
+              
+            />
+            2
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question1"
+              id="option3"
+              autocomplete="off"
+              value="3"
+              
+            />
+            3
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question1"
+              id="option4"
+              autocomplete="off"
+              value="4"
+              
+            />
+            4
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question1"
+              id="option5"
+              autocomplete="off"
+              value="5"
+              
+            />
+            5
+          </label>
         </div>
       </div>
 
@@ -141,12 +207,57 @@
         role="toolbar"
         aria-label="Toolbar with button groups"
       >
-        <div class="btn-group mr-2" role="group" aria-label="First group">
-          <button type="button" class="btn btn-secondary">1</button>
-          <button type="button" class="btn btn-secondary">2</button>
-          <button type="button" class="btn btn-secondary">3</button>
-          <button type="button" class="btn btn-secondary">4</button>
-          <button type="button" class="btn btn-secondary">5</button>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question2"
+              id="option1test"
+              autocomplete="off"
+              value="1"
+            />
+            1
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question2"
+              id="option2"
+              autocomplete="off"
+              value="2"
+            />
+            2
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question2"
+              id="option3"
+              autocomplete="off"
+              value="3"
+            />
+            3
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question2"
+              id="option4"
+              autocomplete="off"
+              value="4"
+            />
+            4
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question2"
+              id="option5"
+              autocomplete="off"
+              value="5"
+            />
+            5
+          </label>
         </div>
       </div>
 
@@ -160,12 +271,57 @@
         role="toolbar"
         aria-label="Toolbar with button groups"
       >
-        <div class="btn-group mr-2" role="group" aria-label="First group">
-          <button type="button" class="btn btn-secondary">1</button>
-          <button type="button" class="btn btn-secondary">2</button>
-          <button type="button" class="btn btn-secondary">3</button>
-          <button type="button" class="btn btn-secondary">4</button>
-          <button type="button" class="btn btn-secondary">5</button>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question3"
+              id="option1"
+              autocomplete="off"
+              value="1"
+            />
+            1
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question3"
+              id="option2"
+              autocomplete="off"
+              value="2"
+            />
+            2
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question3"
+              id="option3"
+              autocomplete="off"
+              value="3"
+            />
+            3
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question3"
+              id="option4"
+              autocomplete="off"
+              value="4"
+            />
+            4
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question3"
+              id="option5"
+              autocomplete="off"
+              value="5"
+            />
+            5
+          </label>
         </div>
       </div>
 
@@ -178,12 +334,57 @@
         role="toolbar"
         aria-label="Toolbar with button groups"
       >
-        <div class="btn-group mr-2" role="group" aria-label="First group">
-          <button type="button" class="btn btn-secondary">1</button>
-          <button type="button" class="btn btn-secondary">2</button>
-          <button type="button" class="btn btn-secondary">3</button>
-          <button type="button" class="btn btn-secondary">4</button>
-          <button type="button" class="btn btn-secondary">5</button>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question4"
+              id="option1"
+              autocomplete="off"
+              value="1"
+            />
+            1
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question4"
+              id="option2"
+              autocomplete="off"
+              value="2"
+            />
+            2
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question4"
+              id="option3"
+              autocomplete="off"
+              value="3"
+            />
+            3
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question4"
+              id="option4"
+              autocomplete="off"
+              value="4"
+            />
+            4
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question4"
+              id="option5"
+              autocomplete="off"
+              value="5"
+            />
+            5
+          </label>
         </div>
       </div>
 
@@ -196,12 +397,57 @@
         role="toolbar"
         aria-label="Toolbar with button groups"
       >
-        <div class="btn-group mr-2" role="group" aria-label="First group">
-          <button type="button" class="btn btn-secondary">1</button>
-          <button type="button" class="btn btn-secondary">2</button>
-          <button type="button" class="btn btn-secondary">3</button>
-          <button type="button" class="btn btn-secondary">4</button>
-          <button type="button" class="btn btn-secondary">5</button>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question5"
+              id="option1"
+              autocomplete="off"
+              value="1"
+            />
+            1
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question5"
+              id="option2"
+              autocomplete="off"
+              value="2"
+            />
+            2
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question5"
+              id="option3"
+              autocomplete="off"
+              value="3"
+            />
+            3
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question5"
+              id="option4"
+              autocomplete="off"
+              value="4"
+            />
+            4
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question5"
+              id="option5"
+              autocomplete="off"
+              value="5"
+            />
+            5
+          </label>
         </div>
       </div>
 
@@ -214,12 +460,57 @@
         role="toolbar"
         aria-label="Toolbar with button groups"
       >
-        <div class="btn-group mr-2" role="group" aria-label="First group">
-          <button type="button" class="btn btn-secondary">1</button>
-          <button type="button" class="btn btn-secondary">2</button>
-          <button type="button" class="btn btn-secondary">3</button>
-          <button type="button" class="btn btn-secondary">4</button>
-          <button type="button" class="btn btn-secondary">5</button>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question6"
+              id="option1"
+              autocomplete="off"
+              value="1"
+            />
+            1
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question6"
+              id="option2"
+              autocomplete="off"
+              value="2"
+            />
+            2
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question6"
+              id="option3"
+              autocomplete="off"
+              value="3"
+            />
+            3
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question6"
+              id="option4"
+              autocomplete="off"
+              value="4"
+            />
+            4
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question6"
+              id="option5"
+              autocomplete="off"
+              value="5"
+            />
+            5
+          </label>
         </div>
       </div>
 
@@ -233,14 +524,55 @@
         role="toolbar"
         aria-label="Toolbar with button groups"
       >
-        <div class="btn-group mr-2" role="group" aria-label="First group">
-          <button type="button" class="btn btn-secondary">1</button>
-          <button type="button" class="btn btn-secondary">2</button>
-          <button type="button" class="btn btn-secondary">3</button>
-          <button type="button" class="btn btn-secondary">4</button>
-          <button type="button" class="btn btn-secondary">5</button>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question7"
+              id="option1"
+              autocomplete="off"
+            />
+            1
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question7"
+              id="option2"
+              autocomplete="off"
+            />
+            2
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question7"
+              id="option3"
+              autocomplete="off"
+            />
+            3
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question7"
+              id="option4"
+              autocomplete="off"
+            />
+            4
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question7"
+              id="option5"
+              autocomplete="off"
+            />
+            5
+          </label>
         </div>
       </div>
+
       <h4>Question 8</h4>
       <h5>
         You rarely get carried away by fantasies and ideas.
@@ -250,12 +582,52 @@
         role="toolbar"
         aria-label="Toolbar with button groups"
       >
-        <div class="btn-group mr-2" role="group" aria-label="First group">
-          <button type="button" class="btn btn-secondary">1</button>
-          <button type="button" class="btn btn-secondary">2</button>
-          <button type="button" class="btn btn-secondary">3</button>
-          <button type="button" class="btn btn-secondary">4</button>
-          <button type="button" class="btn btn-secondary">5</button>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question8"
+              id="option1"
+              autocomplete="off"
+            />
+            1
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question8"
+              id="option2"
+              autocomplete="off"
+            />
+            2
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question8"
+              id="option3"
+              autocomplete="off"
+            />
+            3
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question8"
+              id="option4"
+              autocomplete="off"
+            />
+            4
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question8"
+              id="option5"
+              autocomplete="off"
+            />
+            5
+          </label>
         </div>
       </div>
 
@@ -269,12 +641,52 @@
         role="toolbar"
         aria-label="Toolbar with button groups"
       >
-        <div class="btn-group mr-2" role="group" aria-label="First group">
-          <button type="button" class="btn btn-secondary">1</button>
-          <button type="button" class="btn btn-secondary">2</button>
-          <button type="button" class="btn btn-secondary">3</button>
-          <button type="button" class="btn btn-secondary">4</button>
-          <button type="button" class="btn btn-secondary">5</button>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question9"
+              id="option1"
+              autocomplete="off"
+            />
+            1
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question9"
+              id="option2"
+              autocomplete="off"
+            />
+            2
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question9"
+              id="option3"
+              autocomplete="off"
+            />
+            3
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question9"
+              id="option4"
+              autocomplete="off"
+            />
+            4
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question9"
+              id="option5"
+              autocomplete="off"
+            />
+            5
+          </label>
         </div>
       </div>
 
@@ -287,15 +699,55 @@
         role="toolbar"
         aria-label="Toolbar with button groups"
       >
-        <div class="btn-group mr-2" role="group" aria-label="First group">
-          <button type="button" class="btn btn-secondary">1</button>
-          <button type="button" class="btn btn-secondary">2</button>
-          <button type="button" class="btn btn-secondary">3</button>
-          <button type="button" class="btn btn-secondary">4</button>
-          <button type="button" class="btn btn-secondary">5</button>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question10"
+              id="option1"
+              autocomplete="off"
+            />
+            1
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question10"
+              id="option2"
+              autocomplete="off"
+            />
+            2
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question10"
+              id="option3"
+              autocomplete="off"
+            />
+            3
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question10"
+              id="option4"
+              autocomplete="off"
+            />
+            4
+          </label>
+          <label class="btn btn-secondary">
+            <input
+              type="radio"
+              name="question10"
+              id="option5"
+              autocomplete="off"
+            />
+            5
+          </label>
         </div>
       </div>
-    </div>
+
     <button type="submit" class="btn btn-light btn-lg btn-block" id="subButton">
       Submit
     </button>
